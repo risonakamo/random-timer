@@ -35,4 +35,35 @@
 /*!*******************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js!./web/pages/index.less ***!
   \*******************************************************************************************************************************************/
+body {
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  font-size: 20px;
+  border-bottom: 1px solid #848484;
+}
+h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.9;
+}
+.main-inputs-zone {
+  display: flex;
+  width: 1000px;
+  margin: auto;
+}
+.main-inputs-zone .time-inputs {
+  flex: 1;
+  padding: 0px 5px;
+  box-sizing: border-box;
+}
+.main-inputs-zone .time-inputs .timer-input-header {
+  margin-top: 20px;
+}
+.main-inputs-zone .range-inputs {
+  flex: 2;
+}
 

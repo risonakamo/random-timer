@@ -1,0 +1,47 @@
+// tempcolour
+@h1-border-bottom: #848484;
+
+body
+{
+    margin: 0;
+}
+
+h1
+{
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 1px solid @h1-border-bottom;
+}
+
+h2
+{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    opacity: .9;
+}
+
+.main-inputs-zone
+{
+    display: flex;
+    width: 1000px;
+    margin: auto;
+
+    .time-inputs
+    {
+        flex: 1;
+        padding: 0px 5px;
+        box-sizing: border-box;
+
+        .timer-input-header
+        {
+            margin-top: 20px;
+        }
+    }
+
+    .range-inputs
+    {
+        flex: 2;
+    }
+}

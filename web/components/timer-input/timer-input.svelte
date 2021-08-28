@@ -5,6 +5,8 @@
   import {addInputToTimerStr,backspaceTimerStr,convertToArrayTimerStr,
     isValidTimerStrInput} from "lib/timer-string";
 
+  export var tabIndex:number;
+
   var inEditing:boolean=false;
   var topClass:Object;
   var timeValue:string="";
@@ -74,7 +76,7 @@
   $: timerDigits=convertToArrayTimerStr(timeValue,true);
 </script>
 
-<div class={cx("timer-input",topClass)} on:focus={h_focus} on:blur={h_blur} tabindex="0"
+<div class={cx("timer-input",topClass)} on:focus={h_focus} on:blur={h_blur} tabindex={tabIndex}
   on:keydown={h_key} bind:this={theTimerElement}
 >
   {#each timerDigits as digit}
