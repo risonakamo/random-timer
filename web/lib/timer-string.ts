@@ -94,7 +94,7 @@ export function convertToArrayTimerStr(timerstr:string,full:boolean):TimerStrDig
 }
 
 /** check if input string is valid timer string input (can only be numbers) */
-function isValidTimerStrInput(input:string):boolean
+export function isValidTimerStrInput(input:string):boolean
 {
-    return parseInt(input)!=NaN && input.length==1;
+    return !isNaN(parseInt(input)) && input.length==1;
 }

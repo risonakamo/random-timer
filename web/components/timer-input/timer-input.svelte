@@ -2,7 +2,8 @@
   import "./timer-input.less";
   import cx from "classnames";
 
-  import {addInputToTimerStr,backspaceTimerStr,convertToArrayTimerStr} from "lib/timer-string";
+  import {addInputToTimerStr,backspaceTimerStr,convertToArrayTimerStr,
+    isValidTimerStrInput} from "lib/timer-string";
 
   var inEditing:boolean=false;
   var topClass:Object;
@@ -40,6 +41,11 @@
 
     else
     {
+      if (!isValidTimerStrInput(e.key))
+      {
+        return;
+      }
+
       // if first input after having focused on the input box, the first input should clear the current
       // timer value
       if (waitingForFirstInput)
