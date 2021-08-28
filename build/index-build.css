@@ -17,6 +17,9 @@
   display: inline-block;
   width: 15px;
 }
+.timer-input.editing {
+  color: #bfbfbf;
+}
 
 /*!*******************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js!./web/pages/index.less ***!
