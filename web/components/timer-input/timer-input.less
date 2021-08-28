@@ -37,6 +37,17 @@
     {
         color: @editing-fade-text;
         border-bottom: 2px solid @editing-bottom-border;
+
+        &.force-fade
+        {
+            span
+            {
+                &.not-faded
+                {
+                    color: @editing-fade-text;
+                }
+            }
+        }
     }
 
     &:focus

@@ -67,7 +67,8 @@
   }
 
   $: topClass={
-    editing:inEditing
+    editing:inEditing,
+    "force-fade":waitingForFirstInput
   };
 
   $: timerDigits=convertToArrayTimerStr(timeValue,true);

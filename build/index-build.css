@@ -25,6 +25,9 @@
   color: #bfbfbf;
   border-bottom: 2px solid #1B66C9;
 }
+.timer-input.editing.force-fade span.not-faded {
+  color: #bfbfbf;
+}
 .timer-input:focus {
   outline: none;
 }
