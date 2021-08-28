@@ -8,6 +8,7 @@
   var topClass:Object;
   var timeValue:string="";
   var timerDigits:TimerStrDigit[]=[];
+  var waitingForFirstInput:boolean=false;
 
   var theTimerElement:HTMLDivElement;
 
@@ -15,6 +16,7 @@
   function h_focus()
   {
     inEditing=true;
+    waitingForFirstInput=true;
   }
 
   /** exit editing mode without saving */
@@ -31,13 +33,21 @@
       timeValue=backspaceTimerStr(timeValue);
     }
 
-    else if (e.key=="Enter")
+    else if (e.key=="Enter" || e.key=="Escape")
     {
       theTimerElement.blur();
     }
 
     else
     {
+      // if first input after having focused on the input box, the first input should clear the current
+      // timer value
+      if (waitingForFirstInput)
+      {
+        waitingForFirstInput=false;
+        timeValue="";
+      }
+
       timeValue=addInputToTimerStr(timeValue,e.key);
     }
   }
