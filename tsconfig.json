@@ -10,7 +10,8 @@
             "svelte"
         ],
         "paths":{
-            "components/*":["web/components/*"]
+            "components/*":["web/components/*"],
+            "lib/*":["web/lib/*"],
         }
     },
     "include":[

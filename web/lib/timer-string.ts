@@ -10,7 +10,7 @@ export function addInputToTimerStr(timerstring:string,input:string):string
     }
 
     // limit to length 6 for now
-    if (timerstring.length==6)
+    if (timerstring.length>=6)
     {
         return timerstring;
     }
