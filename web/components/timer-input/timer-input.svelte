@@ -7,6 +7,7 @@
   var inEditing:boolean=false;
   var topClass:Object;
   var timeValue:string="";
+  var timerDigits:TimerStrDigit[]=[];
 
   var theTimerElement:HTMLDivElement;
 
@@ -39,21 +40,25 @@
     {
       timeValue=addInputToTimerStr(timeValue,e.key);
     }
-
-    console.log("new time value",timeValue);
   }
 
   $: topClass={
     editing:inEditing
   };
+
+  $: timerDigits=convertToArrayTimerStr(timeValue,true);
 </script>
 
 <div class={cx("timer-input",topClass)} on:focus={h_focus} on:blur={h_blur} tabindex="0"
   on:keydown={h_key} bind:this={theTimerElement}
 >
-  <span>5</span>
-  <span class="small-digit">m</span>
-  <div class="digit-spacer"></div>
-  <span>00</span>
-  <span class="small-digit">s</span>
+  {#each timerDigits as digit}
+    {#if digit.style=="number"}
+      <span>{digit.value}</span>
+    {:else if digit.style=="text"}
+      <span class="small-digit">{digit.value}</span>
+    {:else if digit.style=="space"}
+      <div class="digit-spacer"></div>
+    {/if}
+  {/each}
 </div>
