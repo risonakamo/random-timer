@@ -2,7 +2,7 @@
   import "./timer-input.less";
   import cx from "classnames";
 
-  import {addInputToTimerStr,backspaceTimerStr} from "lib/timer-string";
+  import {addInputToTimerStr,backspaceTimerStr,convertToArrayTimerStr} from "lib/timer-string";
 
   var inEditing:boolean=false;
   var topClass:Object;
