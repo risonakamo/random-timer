@@ -1,8 +1,7 @@
 <script lang="ts">
-  import "./index.less";
+  import TimerInput from "components/timer-input/timer-input.svelte";
 
+  import "./index.less";
 </script>
 
-<main>
-  hello
-</main>
+<TimerInput/>
