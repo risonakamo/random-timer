@@ -43,11 +43,9 @@
     console.log("new time value",timeValue);
   }
 
-  $:{
-    topClass={
-      editing:inEditing
-    };
-  }
+  $: topClass={
+    editing:inEditing
+  };
 </script>
 
 <div class={cx("timer-input",topClass)} on:focus={h_focus} on:blur={h_blur} tabindex="0"
