@@ -2,6 +2,7 @@
 @timer-input-bottom-border: #ebebeb;
 @editing-fade-text: #bfbfbf;
 @editing-bottom-border: #1B66C9;
+@normal-text: black;
 
 .timer-input
 {
@@ -13,10 +14,16 @@
     span
     {
         font-size: 60px;
+        color: @editing-fade-text;
 
         &.small-digit
         {
             font-size: 30px;
+        }
+
+        &.not-faded
+        {
+            color: @normal-text;
         }
     }
 

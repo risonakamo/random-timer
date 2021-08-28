@@ -52,6 +52,14 @@
     }
   }
 
+  /** from digit data, return cx class modifier */
+  function digitNotFadeClass(digitData:TimerStrDigit):Object
+  {
+    return {
+      "not-faded":digitData.active
+    };
+  }
+
   $: topClass={
     editing:inEditing
   };
@@ -64,9 +72,9 @@
 >
   {#each timerDigits as digit}
     {#if digit.style=="number"}
-      <span>{digit.value}</span>
+      <span class={cx(digitNotFadeClass(digit))}>{digit.value}</span>
     {:else if digit.style=="text"}
-      <span class="small-digit">{digit.value}</span>
+      <span class={cx(digitNotFadeClass(digit),"small-digit")}>{digit.value}</span>
     {:else if digit.style=="space"}
       <div class="digit-spacer"></div>
     {/if}

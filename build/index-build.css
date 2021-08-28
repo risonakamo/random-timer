@@ -9,9 +9,13 @@
 }
 .timer-input span {
   font-size: 60px;
+  color: #bfbfbf;
 }
 .timer-input span.small-digit {
   font-size: 30px;
+}
+.timer-input span.not-faded {
+  color: black;
 }
 .timer-input .digit-spacer {
   display: inline-block;

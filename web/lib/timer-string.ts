@@ -45,7 +45,16 @@ export function convertToArrayTimerStr(timerstr:string,full:boolean):TimerStrDig
         timerstr.slice(4,6)
     ];
 
+    // decide when to make digits not faded. all digits start faded until the first timer part that is
+    // not 00.
+    var startNotFaded:boolean=false;
+
     return _.flatMap(timerparts,(x:string,i:number):TimerStrDigit[]=>{
+        if (x!="00")
+        {
+            startNotFaded=true;
+        }
+
         // if in minimal mode, remove any time parts that are all 0s
         if (x=="00" && !full)
         {
@@ -59,14 +68,26 @@ export function convertToArrayTimerStr(timerstr:string,full:boolean):TimerStrDig
         if (TIME_CHARS[i]!="s")
         {
             endSpace=[
-                {value:"",style:"space"}
+                {value:"",style:"space",active:false}
             ];
         }
 
         return [
-            {value:x[0],style:"number"},
-            {value:x[1],style:"number"},
-            {value:TIME_CHARS[i],style:"text"},
+            {
+                value:x[0],
+                style:"number",
+                active:startNotFaded
+            },
+            {
+                value:x[1],
+                style:"number",
+                active:startNotFaded
+            },
+            {
+                value:TIME_CHARS[i],
+                style:"text",
+                active:startNotFaded
+            },
             ...endSpace
         ];
     });
