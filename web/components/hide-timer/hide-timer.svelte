@@ -1,9 +1,9 @@
 <script lang="ts">
   import TimerDisplay from "components/timer-display/timer-display.svelte";
 
-  var hidden:boolean=true;
-
   import "./hide-timer.less";
+
+  var hidden:boolean=true;
 </script>
 
 <div class="hide-timer">
