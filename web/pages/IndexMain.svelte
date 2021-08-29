@@ -22,6 +22,6 @@
   </div>
 
   <div class="timer-zone">
-    <HideTimer timeValue={timerValue} hidden={false}/>
+    <HideTimer timeValue={timerValue} hidden={true}/>
   </div>
 </div>
