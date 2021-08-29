@@ -8,13 +8,16 @@
 
   import "./timer-input.less";
 
+  /** props */
   export var tabIndex:number;
 
+  /** state */
   var inEditing:boolean=false;
   var topClass:Object;
   var timeValue:string="";
   var waitingForFirstInput:boolean=false;
 
+  /** refs */
   var theTimerElement:HTMLDivElement;
 
   /** on focus, enter editing mode */

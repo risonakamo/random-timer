@@ -5,5 +5,5 @@
 </script>
 
 <div class="hide-timer">
-  <TimerDisplay timeValue="2000"/>
+  <TimerDisplay timeValue="102" minDigitMode={true}/>
 </div>

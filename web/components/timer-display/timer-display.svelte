@@ -6,6 +6,7 @@
   import "./timer-display.less";
 
   export var timeValue:string;
+  export var minDigitMode:boolean=false;
 
   var timerDigits:TimerStrDigit[]=[];
 
@@ -17,7 +18,7 @@
     };
   }
 
-  $: timerDigits=convertToArrayTimerStr(timeValue,true);
+  $: timerDigits=convertToArrayTimerStr(timeValue,!minDigitMode);
 </script>
 
 <div class="timer-display">
