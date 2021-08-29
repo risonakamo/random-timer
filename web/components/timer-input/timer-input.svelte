@@ -3,8 +3,7 @@
 
   import TimerDisplay from "components/timer-display/timer-display.svelte";
 
-  import {addInputToTimerStr,backspaceTimerStr,convertToArrayTimerStr,
-    isValidTimerStrInput} from "lib/timer-string";
+  import {addInputToTimerStr,backspaceTimerStr,isValidTimerStrInput} from "lib/timer-string";
 
   import "./timer-input.less";
 
