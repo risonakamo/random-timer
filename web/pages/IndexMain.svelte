@@ -3,6 +3,8 @@
   import HideTimer from "components/hide-timer/hide-timer.svelte";
 
   import "./index.less";
+
+  var timerValue:string="12";
 </script>
 
 <div class="main-wrap">
@@ -20,6 +22,6 @@
   </div>
 
   <div class="timer-zone">
-    <HideTimer/>
+    <HideTimer timeValue={timerValue} hidden={false}/>
   </div>
 </div>

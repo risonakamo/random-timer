@@ -3,12 +3,13 @@
 
   import "./hide-timer.less";
 
-  var hidden:boolean=true;
+  export var timeValue:string;
+  export var hidden:boolean=false;
 </script>
 
 <div class="hide-timer">
   {#if !hidden}
-    <TimerDisplay timeValue="102" minDigitMode={true}/>
+    <TimerDisplay timeValue={timeValue} minDigitMode={true}/>
   {:else}
     <div class="hide-block">
       <p>timer running</p>

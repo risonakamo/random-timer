@@ -70,7 +70,8 @@ module.exports={
         extensions:[".ts",".js",".svelte"],
         alias:{
             components:`${__dirname}/web/components`,
-            lib:`${__dirname}/web/lib`
+            lib:`${__dirname}/web/lib`,
+            hooks:`${__dirname}/web/hooks`
         }
     },
 
