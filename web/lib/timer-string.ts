@@ -1,6 +1,7 @@
 // timer string library
 
 import _ from "lodash";
+import {Duration} from "luxon";
 
 const TIME_CHARS:string[]=["h","m","s"];
 
@@ -97,4 +98,10 @@ export function convertToArrayTimerStr(timerstr:string,full:boolean):TimerStrDig
 export function isValidTimerStrInput(input:string):boolean
 {
     return !isNaN(parseInt(input)) && input.length==1;
+}
+
+/** convert second duration to timer string value */
+export function secondsToTimerStr(seconds:number):string
+{
+    return Duration.fromObject({seconds}).toFormat("hhmmss");
 }
