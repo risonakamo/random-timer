@@ -1,16 +1,18 @@
 <script lang="ts">
-  import "./timer-input.less";
   import cx from "classnames";
+
+  import TimerDisplay from "components/timer-display/timer-display.svelte";
 
   import {addInputToTimerStr,backspaceTimerStr,convertToArrayTimerStr,
     isValidTimerStrInput} from "lib/timer-string";
+
+  import "./timer-input.less";
 
   export var tabIndex:number;
 
   var inEditing:boolean=false;
   var topClass:Object;
   var timeValue:string="";
-  var timerDigits:TimerStrDigit[]=[];
   var waitingForFirstInput:boolean=false;
 
   var theTimerElement:HTMLDivElement;
@@ -60,32 +62,14 @@
     }
   }
 
-  /** from digit data, return cx class modifier */
-  function digitNotFadeClass(digitData:TimerStrDigit):Object
-  {
-    return {
-      "not-faded":digitData.active
-    };
-  }
-
   $: topClass={
     editing:inEditing,
     "force-fade":waitingForFirstInput
   };
-
-  $: timerDigits=convertToArrayTimerStr(timeValue,true);
 </script>
 
 <div class={cx("timer-input",topClass)} on:focus={h_focus} on:blur={h_blur} tabindex={tabIndex}
   on:keydown={h_key} bind:this={theTimerElement}
 >
-  {#each timerDigits as digit}
-    {#if digit.style=="number"}
-      <span class={cx(digitNotFadeClass(digit))}>{digit.value}</span>
-    {:else if digit.style=="text"}
-      <span class={cx(digitNotFadeClass(digit),"small-digit")}>{digit.value}</span>
-    {:else if digit.style=="space"}
-      <div class="digit-spacer"></div>
-    {/if}
-  {/each}
+  <TimerDisplay timeValue={timeValue}/>
 </div>

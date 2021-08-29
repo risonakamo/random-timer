@@ -2,7 +2,6 @@
 @timer-input-bottom-border: #ebebeb;
 @editing-fade-text: #bfbfbf;
 @editing-bottom-border: #1B66C9;
-@normal-text: black;
 
 .timer-input
 {
@@ -10,28 +9,6 @@
     display: inline-block;
     border-bottom: 1px solid @timer-input-bottom-border;
     padding: 10px 5px;
-
-    span
-    {
-        font-size: 60px;
-        color: @editing-fade-text;
-
-        &.small-digit
-        {
-            font-size: 30px;
-        }
-
-        &.not-faded
-        {
-            color: @normal-text;
-        }
-    }
-
-    .digit-spacer
-    {
-        display: inline-block;
-        width: 15px;
-    }
 
     &.editing
     {

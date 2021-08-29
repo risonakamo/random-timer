@@ -1,3 +1,21 @@
+/*!**********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js!./web/components/timer-display/timer-display.less ***!
+  \**********************************************************************************************************************************************************************/
+.timer-display span {
+  font-size: 60px;
+  color: #bfbfbf;
+}
+.timer-display span.small-digit {
+  font-size: 30px;
+}
+.timer-display span.not-faded {
+  color: black;
+}
+.timer-display .digit-spacer {
+  display: inline-block;
+  width: 15px;
+}
+
 /*!******************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/less-loader/dist/cjs.js!./web/components/timer-input/timer-input.less ***!
   \******************************************************************************************************************************************************************/
@@ -6,20 +24,6 @@
   display: inline-block;
   border-bottom: 1px solid #ebebeb;
   padding: 10px 5px;
-}
-.timer-input span {
-  font-size: 60px;
-  color: #bfbfbf;
-}
-.timer-input span.small-digit {
-  font-size: 30px;
-}
-.timer-input span.not-faded {
-  color: black;
-}
-.timer-input .digit-spacer {
-  display: inline-block;
-  width: 15px;
 }
 .timer-input.editing {
   color: #bfbfbf;

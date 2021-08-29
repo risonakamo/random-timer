@@ -1,0 +1,27 @@
+@editing-fade-text: #bfbfbf;
+@normal-text: black;
+
+.timer-display
+{
+    span
+    {
+        font-size: 60px;
+        color: @editing-fade-text;
+
+        &.small-digit
+        {
+            font-size: 30px;
+        }
+
+        &.not-faded
+        {
+            color: @normal-text;
+        }
+    }
+
+    .digit-spacer
+    {
+        display: inline-block;
+        width: 15px;
+    }
+}
