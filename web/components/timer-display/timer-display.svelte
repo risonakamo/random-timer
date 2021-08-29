@@ -23,7 +23,7 @@
 <div class="timer-display">
   {#each timerDigits as digit}
     {#if digit.style=="number"}
-      <span class={cx(digitNotFadeClass(digit))}>{digit.value}</span>
+      <span class={cx(digitNotFadeClass(digit),"large-digit")}>{digit.value}</span>
     {:else if digit.style=="text"}
       <span class={cx(digitNotFadeClass(digit),"small-digit")}>{digit.value}</span>
     {:else if digit.style=="space"}
