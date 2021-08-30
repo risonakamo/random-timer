@@ -105,3 +105,15 @@ export function secondsToTimerStr(seconds:number):string
 {
     return Duration.fromObject({seconds}).toFormat("hhmmss");
 }
+
+/** convert timer str to seconds */
+export function timerStrToSeconds(timerstr:string):number
+{
+    timerstr=timerstr.padStart(6,"0");
+
+    return (
+        parseInt(timerstr.slice(0,2))*60*60+
+        parseInt(timerstr.slice(2,4))*60+
+        parseInt(timerstr.slice(4,6))
+    );
+}

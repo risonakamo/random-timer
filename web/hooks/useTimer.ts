@@ -49,5 +49,5 @@ export default function useTimer()
         startTimer,
         stopTimer,
         resetTimer
-    ];
+    ] as const;
 }
