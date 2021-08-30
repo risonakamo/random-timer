@@ -4,6 +4,6 @@
   export var text:string;
 </script>
 
-<div class="button-81">
+<div class="button-81" on:click>
   {text}
 </div>

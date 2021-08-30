@@ -13,7 +13,7 @@
   /** state */
   var inEditing:boolean=false;
   var topClass:Object;
-  var timeValue:string="";
+  export var timeValue:string=""; // 2-way
   var waitingForFirstInput:boolean=false;
 
   /** refs */
