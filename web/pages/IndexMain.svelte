@@ -1,6 +1,7 @@
 <script lang="ts">
   import TimerInput from "components/timer-input/timer-input.svelte";
   import HideTimer from "components/hide-timer/hide-timer.svelte";
+  import Button_81 from "components/button-81/button-81.svelte";
 
   import "./index.less";
 
@@ -23,5 +24,9 @@
 
   <div class="timer-zone">
     <HideTimer timeValue={timerValue} hidden={true}/>
+  </div>
+
+  <div class="control-zone">
+    <Button_81 text="START"/>
   </div>
 </div>
