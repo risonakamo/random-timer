@@ -123,6 +123,17 @@ p {
 .main-inputs-zone .range-inputs {
   flex: 2;
 }
+.main-inputs-zone .range-inputs .url-input-wrap {
+  padding: 10px 10px 0 10px;
+  font-size: 0;
+}
+.main-inputs-zone .range-inputs .url-input-wrap textarea.url-input {
+  width: 100%;
+  margin: 0;
+  resize: none;
+  box-sizing: border-box;
+  height: 243px;
+}
 .timer-zone {
   margin-top: 30px;
   text-align: center;

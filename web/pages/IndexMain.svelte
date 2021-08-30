@@ -19,6 +19,9 @@
     </div>
     <div class="range-inputs">
       <h1>Timer Urls</h1>
+      <div class="url-input-wrap">
+        <textarea class="url-input"></textarea>
+      </div>
     </div>
   </div>
 
